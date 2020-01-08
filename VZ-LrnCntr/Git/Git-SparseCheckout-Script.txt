@@ -1,0 +1,71 @@
+C:\Users\gewin\testlab\spring-mvc-lab>git init
+Initialized empty Git repository in C:/Users/gewin/testlab/spring-mvc-lab/.git/
+
+C:\Users\gewin\testlab\spring-mvc-lab>git remote add origin https://github.com/temmyg/spring-mvc-lab.git
+
+C:\Users\gewin\testlab\spring-mvc-lab>git config core.sparsecheckout true
+
+C:\Users\gewin\testlab\spring-mvc-lab>echo ground >> .git/info/sparse-checkout
+
+C:\Users\gewin\testlab\spring-mvc-lab>git fetch
+remote: Enumerating objects: 291, done.
+remote: Counting objects: 100% (291/291), done.
+remote: Compressing objects: 100% (172/172), done.
+remote: Total 291 (delta 66), reused 286 (delta 64), pack-reused 0
+Receiving objects: 100% (291/291), 23.01 MiB | 5.43 MiB/s, done.
+Resolving deltas: 100% (66/66), done.
+From https://github.com/temmyg/spring-mvc-lab
+ * [new branch]      dependabot/maven/spring4-form-handle-mkyong/spring.version-5.2.2.RELEASE -> origin/dependabot/maven/spring4-form-handle-mkyong/spring.version-5.2.2.RELEASE
+ * [new branch]      master     -> origin/master
+
+C:\Users\gewin\testlab\spring-mvc-lab>git branch -a
+  remotes/origin/dependabot/maven/spring4-form-handle-mkyong/spring.version-5.2.2.RELEASE
+  remotes/origin/master
+
+C:\Users\gewin\testlab\spring-mvc-lab>git branch master
+fatal: Not a valid object name: 'master'.
+
+C:\Users\gewin\testlab\spring-mvc-lab>git branch origin/master
+fatal: Not a valid object name: 'master'.
+
+C:\Users\gewin\testlab\spring-mvc-lab>git branch --set-upstream-to=origin/master master
+fatal: branch 'master' does not exist
+
+C:\Users\gewin\testlab\spring-mvc-lab>git add .
+
+C:\Users\gewin\testlab\spring-mvc-lab>git commit -m "\"git branch --set-upstream-to=origin/master master\" test only"
+[master (root-commit) 568cd55] "git branch --set-upstream-to=origin/master master" test only
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.docx
+
+C:\Users\gewin\testlab\spring-mvc-lab>git branch
+* master
+
+C:\Users\gewin\testlab\spring-mvc-lab>git branch --set-upstream-to=origin/master master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+C:\Users\gewin\testlab\spring-mvc-lab>git checkout master
+error: Sparse checkout leaves no entry on working directory
+
+C:\Users\gewin\testlab\spring-mvc-lab>git checkout origin\master
+error: pathspec 'origin\master' did not match any file(s) known to git
+
+C:\Users\gewin\testlab\spring-mvc-lab>git checkout origin/master
+Note: switching to 'origin/master'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at df480da update .gitignore

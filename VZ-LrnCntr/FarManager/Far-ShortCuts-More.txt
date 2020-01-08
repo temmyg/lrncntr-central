@@ -1,0 +1,3 @@
+Far Manager ShortCuts:
+
+Ctrl+Shift+<Right Arrow> - to the end of the line

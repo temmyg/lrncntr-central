@@ -1,0 +1,3 @@
+git config core.sparsecheckout true
+echo ground >> .git/info/sparse-checkout
+git checkout origin/master
